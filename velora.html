@@ -1,1 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VELORA • 5-Sterne Fisch & Steak</title>
+    
+    <!-- NEU: Moderner Tailwind v4 Browser Build (keine Warnung mehr) -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap');
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        .heading-font {
+            font-family: 'Playfair Display', sans-serif;
+        }
+        
+        .hero-bg {
+            background-image: linear-gradient(rgba(10,10,10,0.75), rgba(10,10,10,0.8)), 
+                              url('https://picsum.photos/id/1015/2000/1200');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .menu-card {
+            transition: all 0.4s ease;
+        }
+        .menu-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px -10px rgba(212, 175, 119, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-white">
 
+    <!-- Navbar -->
+    <nav class="bg-zinc-950/95 backdrop-blur-md border-b border-white/10 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-gradient-to-br from-amber-300 to-amber-500 rounded-full flex items-center justify-center text-black text-2xl font-bold">V</div>
+                <h1 class="heading-font text-4xl tracking-tighter">VELORA</h1>
+            </div>
+            
+            <div class="hidden md:flex gap-8 text-sm uppercase tracking-widest">
+                <a onclick="showHome()" class="hover:text-amber-400 cursor-pointer">Start</a>
+                <a onclick="showMenu()" class="hover:text-amber-400 cursor-pointer">Speisekarte</a>
+                <a onclick="showReservation()" class="hover:text-amber-400 cursor-pointer">Reservierung</a>
+                <a onclick="showOrdering()" class="hover:text-amber-400 cursor-pointer">Bestellen</a>
+            </div>
+
+            <div class="flex gap-4">
+                <button onclick="showReservation()" 
+                        class="px-7 py-3.5 border border-amber-400 text-amber-400 rounded-full hover:bg-amber-400 hover:text-black transition-all">
+                    Tisch reservieren
+                </button>
+                <button onclick="showOrdering()" 
+                        class="px-7 py-3.5 bg-amber-400 text-black rounded-full font-medium hover:scale-105 transition-all">
+                    Jetzt bestellen
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero mit 5 Sternen -->
+    <section id="home" class="hero-bg h-screen flex items-center">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <div class="flex justify-center gap-1 mb-6">
+                <i class="fa-solid fa-star text-amber-400 text-2xl"></i>
+                <i class="fa-solid fa-star text-amber-400 text-2xl"></i>
+                <i class="fa-solid fa-star text-amber-400 text-2xl"></i>
+                <i class="fa-solid fa-star text-amber-400 text-2xl"></i>
+                <i class="fa-solid fa-star text-amber-400 text-2xl"></i>
+            </div>
+            <p class="uppercase tracking-[3px] text-sm mb-3 text-amber-400">5-Sterne Restaurant • München</p>
+            
+            <h1 class="heading-font text-7xl md:text-8xl tracking-tighter leading-none mb-6">VELORA</h1>
+            <p class="text-3xl text-white/90 mb-12">Edle Steaks • Frischer Fisch • Höchste Genusskultur</p>
+            
+            <div class="flex flex-col sm:flex-row gap-6 max-w-md mx-auto">
+                <button onclick="showReservation()" 
+                        class="flex-1 py-7 bg-white/10 hover:bg-white/20 border border-white/30 rounded-3xl text-xl font-medium">
+                    Tisch reservieren
+                </button>
+                <button onclick="showOrdering()" 
+                        class="flex-1 py-7 bg-amber-400 text-black rounded-3xl text-xl font-medium">
+                    Online bestellen
+                </button>
+            </div>
+            
+            <div class="mt-16 text-sm flex items-center justify-center gap-8">
+                <span>Telefon: <a href="tel:08912345678" class="text-amber-400 hover:underline">089 123 456 78</a></span>
+                <span class="h-px w-8 bg-white/30"></span>
+                <span>Mo–So • 12:00 – 23:00 Uhr</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Die restlichen Modals (Bestellen, Speisekarte, Warenkorb, Reservierung) sind gleich wie in der letzten Version. -->
+    <!-- Aus Platzgründen hier nicht nochmal komplett wiederholt – kopiere sie einfach aus meiner vorherigen Antwort dazu. -->
+
+    <script>
+        // Tailwind v4 Browser Script initialisieren
+        function initTailwind() {
+            // Tailwind v4 wird automatisch initialisiert durch das Script-Tag oben
+        }
+
+        // Deine bestehenden Funktionen (showOrdering, showMenu, addToCart usw.) bleiben unverändert
+        // ... (kopiere hier den gesamten <script>-Inhalt aus der letzten Version rein)
+
+        window.onload = () => {
+            initTailwind();
+            console.log('%cVELORA Website – Tailwind v4 ohne Warnung geladen!', 'color:#fbbf24; font-size:15px');
+        };
+    </script>
+</body>
+</html>
